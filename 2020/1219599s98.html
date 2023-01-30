@@ -1,0 +1,1641 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="打造 Mac 下高颜值好用的终端环境, JAVA 大数据 边城手记">
+    <meta name="baidu-site-verification" content="code-eoJwXDIBYP">
+    <meta name="google-site-verification" content="qoX43c40iHqivBeIMWWlDzqGv3YJ7JkDuOgVgb3dKfE">
+    <meta name="description" content="计算机科学与技术 | JAVA大数据">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VLPSEJRP2T"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-VLPSEJRP2T');
+</script>
+
+
+    <title>打造 Mac 下高颜值好用的终端环境 | Ranger的博客</title>
+    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/css/my.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/libs/jquery/jquery.min.js"></script>
+
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Ranger的博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Ranger的博客</div>
+        <div class="logo-desc">
+            
+            计算机科学与技术 | JAVA大数据
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+<script src="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/medias/featureimages/21.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">打造 Mac 下高颜值好用的终端环境</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/命令行/">
+                                <span class="chip bg-color">命令行</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Mac/" class="post-category">
+                                Mac
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-12-19
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <img src="http://oss.vihacker.top/image/关注我.png" alt="微信扫码关注" style="zoom:50%;">
+
+<hr>
+<p>如果你觉得当前的终端操作不符合你的气质，可以看看我今天来介绍的 Mac 终端利器，不过不会介绍太多细节操作。</p>
+<p><a href="https://blog-biezhi-me-1251171175.cos.ap-shanghai.myqcloud.com/public/images/2018/11/biezhi_iterm2.png" target="_blank" rel="noopener"><img src="https://blog-biezhi-me-1251171175.cos.ap-shanghai.myqcloud.com/public/images/2018/11/biezhi_iterm2.png" alt="biezhi iterm"></a></p>
+<h1 id="它们是谁？"><a href="#它们是谁？" class="headerlink" title="它们是谁？"></a>它们是谁？</h1><ul>
+<li>iTerm2：号称 Mac 下最好的终端工具（嗯，我也这么认为，毕竟我不会别的了）</li>
+<li>zsh：一款强大的终端工具，能帮助你更高效地编写和执行命令。</li>
+</ul>
+<h1 id="安装-iTerm2"><a href="#安装-iTerm2" class="headerlink" title="安装 iTerm2"></a>安装 iTerm2</h1><p>下面的安装我几乎都用 <a href="https://brew.sh/" target="_blank" rel="noopener">brew</a> 方式了，如果你还不懂什么是 brew 可以先去了解</p>
+<p>所以下面我假设你已经安装了 <code>Homebrew</code>。</p>
+<p>如果你从来没有运行过 <code>brew cask</code> 命令，可以先执行：</p>
+<pre><code>brew tap caskroom/cask</code></pre><blockquote>
+<p>多执行也不会怀孕的，放心！</p>
+</blockquote>
+<p>然后开始安装 <code>iTerm2</code></p>
+<pre><code>brew cask install iterm2</code></pre><p>安装成功后在 Launchpad 中可以看到有一个新图标出现，打开 iTerm2。</p>
+<h2 id="代码配色"><a href="#代码配色" class="headerlink" title="代码配色"></a>代码配色</h2><p>默认的界面还是略显丑陋的，我们来设置一下代码配色吧。</p>
+<p><a href="https://blog-biezhi-me-1251171175.cos.ap-shanghai.myqcloud.com/public/images/2018/11/open_settings.png" target="_blank" rel="noopener"><img src="https://blog-biezhi-me-1251171175.cos.ap-shanghai.myqcloud.com/public/images/2018/11/open_settings.png" alt="iTerm2 设置"></a></p>
+<p>先检查下终端颜色配置为 <code>xterm-256color</code>，位置在 <code>iTerm2 -&gt; Preferences -&gt; Profiles -&gt; Terminal</code>。</p>
+<p><a href="https://blog-biezhi-me-1251171175.cos.ap-shanghai.myqcloud.com/public/images/2018/11/iterm_terminal_color.png" target="_blank" rel="noopener"><img src="https://blog-biezhi-me-1251171175.cos.ap-shanghai.myqcloud.com/public/images/2018/11/iterm_terminal_color.png" alt="iTerm2 终端颜色值"></a></p>
+<p>然后就可以设置配色了，默认情况下 <code>iTerm2</code> 只有 7 种自带的配色，当然满足不了我们高颜值的需求了。有人就开源了一款叫 <a href="https://github.com/mbadolato/iTerm2-Color-Schemes" target="_blank" rel="noopener">iTerm2-Color-Schemes</a> 的配色合集，里面有各种经典、常用的配色方案，来使用 Git 下载到本地。</p>
+<pre><code>mkdir ~/.iterm2 &amp;&amp; cd ~/.iterm2
+
+git clone https://github.com/mbadolato/iTerm2-Color-Schemes</code></pre><p>这里我创建了一个 <code>~/.iterm2</code> 的目录，放在别的目录都可以，它的目录结构是这样的：</p>
+<pre><code> ~/.iterm2/iTerm2-Color-Schemes $ ls -la
+total 72
+-rw-r--r--    1 biezhi  staff  34131 Nov  6 11:34 README.md
+drwxr-xr-x  198 biezhi  staff   6336 Nov  6 11:34 Xresources
+drwxr-xr-x    3 biezhi  staff     96 Nov  6 11:34 backgrounds
+drwxr-xr-x  198 biezhi  staff   6336 Nov  6 11:34 konsole
+drwxr-xr-x  198 biezhi  staff   6336 Nov  6 11:34 putty
+drwxr-xr-x  198 biezhi  staff   6336 Nov  6 11:34 remmina
+drwxr-xr-x  198 biezhi  staff   6336 Nov  6 11:34 schemes
+drwxr-xr-x  200 biezhi  staff   6400 Nov  6 11:34 screenshots
+drwxr-xr-x  180 biezhi  staff   5760 Nov  6 11:34 terminal
+drwxr-xr-x  198 biezhi  staff   6336 Nov  6 11:34 terminator
+drwxr-xr-x  199 biezhi  staff   6368 Nov  6 11:34 termite
+drwxr-xr-x  162 biezhi  staff   5184 Nov  6 11:34 tilda
+drwxr-xr-x   19 biezhi  staff    608 Nov  6 11:34 tools
+drwxr-xr-x    3 biezhi  staff     96 Nov  6 11:34 xfce4terminal
+drwxr-xr-x  198 biezhi  staff   6336 Nov  6 11:34 xrdb</code></pre><p>下面需要导入配色方案。</p>
+<p><a href="https://blog-biezhi-me-1251171175.cos.ap-shanghai.myqcloud.com/public/images/2018/11/import_color_schemes.png" target="_blank" rel="noopener"><img src="https://blog-biezhi-me-1251171175.cos.ap-shanghai.myqcloud.com/public/images/2018/11/import_color_schemes.png" alt="导入配色方案"></a></p>
+<p><a href="https://blog-biezhi-me-1251171175.cos.ap-shanghai.myqcloud.com/public/images/2018/11/choose_color_schemes.png" target="_blank" rel="noopener"><img src="https://blog-biezhi-me-1251171175.cos.ap-shanghai.myqcloud.com/public/images/2018/11/choose_color_schemes.png" alt="导入配色方案"></a></p>
+<blockquote>
+<p>选择 <code>schemes</code> 文件夹内的所有配色方案。</p>
+</blockquote>
+<p>导入成功后就可以选择一些流行的配色方案了。</p>
+<p><a href="https://blog-biezhi-me-1251171175.cos.ap-shanghai.myqcloud.com/public/images/2018/11/select_color_scheme.png" target="_blank" rel="noopener"><img src="https://blog-biezhi-me-1251171175.cos.ap-shanghai.myqcloud.com/public/images/2018/11/select_color_scheme.png" alt="选择配色方案"></a></p>
+<p>选择配色后再去你的 iTerm 里面看会发现，已经好看了那么一点。</p>
+<h2 id="安装字体"><a href="#安装字体" class="headerlink" title="安装字体"></a>安装字体</h2><p>为什么要安装字体呢？我们电脑的字体其实是可以用的，但是想要图标的这种字体就没法儿了：</p>
+<p><a href="https://blog-biezhi-me-1251171175.cos.ap-shanghai.myqcloud.com/public/images/2018/11/hack_font.png" target="_blank" rel="noopener"><img src="http://qnoss.vihacker.top/hack_font.png" alt="iTerm2 设置"></a></p>
+<p>而这些图标字体其实是非 <code>ASCII</code> 码字体，在 iTerm2 中可以进行配置，所以先要安装这个字体。这款字体叫 <a href="https://github.com/ryanoasis/nerd-fonts" target="_blank" rel="noopener">nerd-fonts</a>，它支持下面这么多种图标。</p>
+<p><a href="https://blog-biezhi-me-1251171175.cos.ap-shanghai.myqcloud.com/public/images/2018/11/sankey-glyphs-combined-diagram.svg" target="_blank" rel="noopener"><img src="https://blog-biezhi-me-1251171175.cos.ap-shanghai.myqcloud.com/public/images/2018/11/sankey-glyphs-combined-diagram.svg" alt="nerd-fonts"></a></p>
+<p>使用 brew 安装</p>
+<pre><code>brew tap caskroom/fonts
+brew cask install font-hack-nerd-font</code></pre><blockquote>
+<p>注意：安装的时候会去 Github 下载字体，如果你下载失败可能是被墙了。</p>
+<p>那么可以通过 <code>https_proxy=127.0.0.1:1087 brew cask reinstall font-hack-nerd-font</code> 的方式安装，前提是你开启了代理。</p>
+</blockquote>
+<p>安装成功后需要在 iTerm2 中配置一下，在 <code>iTerm2 -&gt; Preferences -&gt; Profiles -&gt; Text -&gt; Font -&gt; Change Font</code> 栏位中，Text 下面勾选 <code>Use a different font for non-ASCII text</code>，然后在 <code>Non-ASCII font</code> 点击 <code>Change font</code> 修改：</p>
+<p><a href="https://blog-biezhi-me-1251171175.cos.ap-shanghai.myqcloud.com/public/images/2018/11/settings_hack_font.png" target="_blank" rel="noopener"><img src="https://blog-biezhi-me-1251171175.cos.ap-shanghai.myqcloud.com/public/images/2018/11/settings_hack_font.png" alt="设置字体"></a></p>
+<p><a href="https://blog-biezhi-me-1251171175.cos.ap-shanghai.myqcloud.com/public/images/2018/11/choose_font.png" target="_blank" rel="noopener"><img src="https://blog-biezhi-me-1251171175.cos.ap-shanghai.myqcloud.com/public/images/2018/11/choose_font.png" alt="选择字体"></a></p>
+<p>这里选择的字体是非 ASCII 码字符的字体，不要设置错了！选择好之后关闭即可。</p>
+<h1 id="安装-zsh"><a href="#安装-zsh" class="headerlink" title="安装 zsh"></a>安装 zsh</h1><pre><code>brew install zsh</code></pre><p><a href="https://blog-biezhi-me-1251171175.cos.ap-shanghai.myqcloud.com/public/images/2018/11/install_zsh.png" target="_blank" rel="noopener"><img src="https://blog-biezhi-me-1251171175.cos.ap-shanghai.myqcloud.com/public/images/2018/11/install_zsh.png" alt="安装 zsh"></a></p>
+<p>默认的 shell 是 bash，需要修改为 zsh：</p>
+<pre><code>sudo sh -c &quot;echo $(which zsh) &gt;&gt; /etc/shells&quot;
+chsh -s $(which zsh)</code></pre><p>修改时会提示你输入密码。</p>
+<p>现在 zsh 安装完成了，安装虽简单，可配置麻烦啊，这你能忍吗？？当然不能！</p>
+<p>于是，<a href="https://github.com/robbyrussell/oh-my-zsh" target="_blank" rel="noopener">oh-my-zsh</a> 出现了，有了它 zsh 配置起来就方便多了，来安装一下它。</p>
+<pre><code>sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;</code></pre><p><a href="https://blog-biezhi-me-1251171175.cos.ap-shanghai.myqcloud.com/public/images/2018/11/install_oh_my_zsh.png" target="_blank" rel="noopener"><img src="https://blog-biezhi-me-1251171175.cos.ap-shanghai.myqcloud.com/public/images/2018/11/install_oh_my_zsh.png" alt="安装 oh-my-zsh"></a></p>
+<p>安装好之后可以看到界面发生了一点点变化，同时会产生一个名为 <code>.zshrc</code> 的配置文件，在用户家目录下面，我们以后主要就是修改它了。</p>
+<h1 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h1><p>上面看到界面发生变化是因为 <code>oh-my-zsh</code> 默认帮我们配置了一个终端主题，你可以打开 <code>~/.zshrc</code> 文件看看：</p>
+<pre><code>ZSH_THEME=&quot;robbyrussell&quot;</code></pre><p>这些主题文件存储在 <code>~/.oh-my-zsh/themes</code> 目录下，你也可以使用其他的。</p>
+<p>为了实现前面想要的酷炫的终端主题，有人写了一个名为 <a href="https://github.com/bhilburn/powerlevel9k" target="_blank" rel="noopener">powerlevel9k</a> 的高颜值主题。</p>
+<p><a href="https://blog-biezhi-me-1251171175.cos.ap-shanghai.myqcloud.com/public/images/2018/11/powerlevel9k.gif" target="_blank" rel="noopener"><img src="https://blog-biezhi-me-1251171175.cos.ap-shanghai.myqcloud.com/public/images/2018/11/powerlevel9k.gif" alt="nerd-fonts"></a></p>
+<p>看到这么骚的操作，赶紧来安装吧！先将主题下载到本地的主题目录中：</p>
+<pre><code>git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k</code></pre><p>然后修改 <code>zsh</code> 主题配置：</p>
+<pre><code>ZSH_THEME=&quot;powerlevel9k/powerlevel9k&quot;</code></pre><p>修改配置文件后一定要记得让配置生效，使用 <code>source</code> 命令：</p>
+<pre><code>source ~/.zshrc</code></pre><p>现在来看看终端变成什么样子了！</p>
+<p><a href="https://blog-biezhi-me-1251171175.cos.ap-shanghai.myqcloud.com/public/images/2018/11/powerlevel9k.png" target="_blank" rel="noopener"><img src="https://blog-biezhi-me-1251171175.cos.ap-shanghai.myqcloud.com/public/images/2018/11/powerlevel9k.png" alt="powerlevel9k"></a></p>
+<blockquote>
+<p>我这里 iTerm2 的代码配色选择的是：<strong>Dracula</strong></p>
+</blockquote>
+<p>如果你喜欢这个风格的话可以不用进行其他主题设置了，为了让它看起来简洁一点，我在 <code>.zshrc</code> 配置中又添加了几行：</p>
+<pre><code>POWERLEVEL9K_MODE=&quot;nerdfont-complete&quot;
+# Customise the Powerlevel9k prompts
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(ssh dir vcs newline status)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true</code></pre><ul>
+<li><code>POWERLEVEL9K_MODE</code>：设置 powerlevel9k 的字体是我们前面下载的</li>
+<li><code>POWERLEVEL9K_LEFT_PROMPT_ELEMENTS</code>：将前面居右的几个元素放在左边了</li>
+<li><code>POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS</code>：右边不放置任何元素（如果你喜欢在右边也可以加）</li>
+<li><code>POWERLEVEL9K_PROMPT_ADD_NEWLINE</code>：在每个提示之前添加换行符</li>
+</ul>
+<p>现在它变成这样了</p>
+<p><a href="https://blog-biezhi-me-1251171175.cos.ap-shanghai.myqcloud.com/public/images/2018/11/simple_powerlevel9k.png" target="_blank" rel="noopener"><img src="https://blog-biezhi-me-1251171175.cos.ap-shanghai.myqcloud.com/public/images/2018/11/simple_powerlevel9k.png" alt="simple powerlevel9k"></a></p>
+<p>更详细的配置可以参考 <a href="https://github.com/bhilburn/powerlevel9k#prompt-customization" target="_blank" rel="noopener">Prompt Customization</a> 和 <a href="https://github.com/bhilburn/powerlevel9k/wiki/Stylizing-Your-Prompt" target="_blank" rel="noopener">Stylizing Your Prompt</a>。</p>
+<h1 id="别名设置"><a href="#别名设置" class="headerlink" title="别名设置"></a>别名设置</h1><p>装好 zsh 之后顺手就添加一下我自己常用的别名：</p>
+<pre><code>alias cls=&#39;clear&#39;
+alias ll=&#39;ls -l&#39;
+alias la=&#39;ls -a&#39;
+alias vi=&#39;vim&#39;
+alias ssr=&quot;http_proxy=http://127.0.0.1:1087 https_proxy=http://127.0.0.1:1087&quot;
+alias grep=&#39;grep --color=auto&#39;</code></pre><p>这样我们只需要输入较短的命令就可以干大事情了！当然这里你可以设置更多自己熟悉的一些操作，比如和编程语言相关的等等。</p>
+<h1 id="zsh-插件推荐"><a href="#zsh-插件推荐" class="headerlink" title="zsh 插件推荐"></a>zsh 插件推荐</h1><p>zsh 那些酷插件可多了去了，我只推荐几个我认为比较实用的。</p>
+<h2 id="extract"><a href="#extract" class="headerlink" title="extract"></a>extract</h2><p>这个插件是用于解压的，解压各种包命令多可能会手误，用它只需要输入 <code>x biezhi.zip</code> 即可。</p>
+<p>在 <code>.zshrc</code> 的 plugins 中添加 <code>extract</code> 配置即可，它支持解压 <a href="https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/extract" target="_blank" rel="noopener">这些</a> 文件。</p>
+<h2 id="autojump"><a href="#autojump" class="headerlink" title="autojump"></a>autojump</h2><p>这个插件主要帮助我们记住目录，一键直达。只要你脑海里有目录的几个字母，然后使用 <code>j [你知道的]</code> 按下 tab 即可，不用 <code>cd cd cd</code> 慢慢找。举个栗子：</p>
+<p>我使用 <code>cd</code> 进入了 <code>blog</code> 这个目录，还进入了 <code>gitmoji</code> 目录。</p>
+<pre><code>cd workspace/projects/github/blog</code></pre><p>如果用 <code>autojump</code> 的话，现在想进入 <code>blog</code> 目录只需要 <code>j blog</code> 即可，一般我们都会按下 <code>tab</code> 确定目录位置，当遇到多个类似的目录名的时候它会提示你输入数字进入。</p>
+<p><strong>安装</strong></p>
+<pre><code>brew install autojump</code></pre><p>安装后添加到 <code>autojump</code> 到 <code>zsh</code> 的 插件配置（plugins）里，再追加一句命令：</p>
+<pre><code>[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] &amp;&amp; . $(brew --prefix)/etc/profile.d/autojump.sh</code></pre><p>让配置文件生效即可。</p>
+<h2 id="zsh-syntax-highlighting"><a href="#zsh-syntax-highlighting" class="headerlink" title="zsh-syntax-highlighting"></a>zsh-syntax-highlighting</h2><p>zsh-syntax-highlighting 用于高亮你的 zsh 可用命令，比如输入 <code>sleep</code>、<code>cat</code> 这些命令的时候就会高亮（功能上确实没啥乱用）。</p>
+<pre><code>brew install zsh-syntax-highlighting</code></pre><p>安装好就行了，不用在 plugins 中追加。</p>
+<h2 id="zsh-autosuggestions"><a href="#zsh-autosuggestions" class="headerlink" title="zsh-autosuggestions"></a>zsh-autosuggestions</h2><p>这是一个神奇的终端自动提示插件，当你输入 <code>ps</code> 的时候它可能会出现 <code>ps -ef | grep helloworld</code>。是因为它会记住你曾经输入过的命令，当你再次输入前几个命令的时候帮你自动匹配，让你工作更高效。下面是一个演示：</p>
+<iframe src="https://asciinema.org/a/37390/embed?size=big" id="asciicast-iframe-37390" name="asciicast-iframe-37390" scrolling="no" allowfullscreen="true" style="box-sizing: border-box; overflow: hidden; margin: 0px; border: 0px; display: inline-block; width: 864px; float: none; visibility: visible; height: 720px;"></iframe>
+
+<p>你可以直接使用 brew 安装</p>
+<pre><code>brew install zsh-autosuggestions</code></pre><h2 id="colors"><a href="#colors" class="headerlink" title="colors"></a>colors</h2><p><a href="https://github.com/athityakumar/colorls" target="_blank" rel="noopener">colors</a> 是一个 Ruby 实现的脚本，它可以配合 powerlevel9k 显示电脑上的文件图标（应该是通过后缀判断的），使用的效果如下：</p>
+<p><a href="https://blog-biezhi-me-1251171175.cos.ap-shanghai.myqcloud.com/public/images/2018/11/colors.png" target="_blank" rel="noopener"><img src="https://blog-biezhi-me-1251171175.cos.ap-shanghai.myqcloud.com/public/images/2018/11/colors.png" alt="colors"></a></p>
+<p>安装后就可以使用了</p>
+<pre><code>gem install colorls</code></pre><h1 id="其他技巧"><a href="#其他技巧" class="headerlink" title="其他技巧"></a>其他技巧</h1><ul>
+<li>连续按两次 <code>tab</code> 会补全列表，补全项可以使用 <code>ctrl+n/p/f/b</code> 上下左右切换</li>
+<li>输入目录名即可进入，不用 <code>cd</code> 了，输入 <code>..</code> 即可到上级目录，返回上次目录输入 <code>-</code></li>
+<li>输入 <code>d</code> 即可看到目录列表</li>
+<li>智能的命令纠错功能（需开启 <code>ENABLE_CORRECTION</code> 配置）</li>
+</ul>
+<h1 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h1><p>这样配置后打开 VSCode 就变成这幅样子：</p>
+<p><a href="https://blog-biezhi-me-1251171175.cos.ap-shanghai.myqcloud.com/public/images/2018/11/vscode_font.png" target="_blank" rel="noopener"><img src="http://qnoss.vihacker.top/vscode_font.png" alt="vscode 字体错误"></a></p>
+<p>如何修复呢？只需要在 vscode 的配置文件中加入下面的配置：</p>
+<pre class="line-numbers language-vscode"><code class="language-vscode">"terminal.integrated.fontFamily": "Hack Nerd Font",
+"terminal.integrated.fontSize": 14,<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>这样就会变成下面这个样子了。</p>
+<p><a href="https://blog-biezhi-me-1251171175.cos.ap-shanghai.myqcloud.com/public/images/2018/11/vscode_new_font.png" target="_blank" rel="noopener"><img src="https://blog-biezhi-me-1251171175.cos.ap-shanghai.myqcloud.com/public/images/2018/11/vscode_new_font.png" alt="修复 vscode 字体"></a></p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Ranger</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://blog.vihackerframework.cc/2020/1219599s98.html">https://blog.vihackerframework.cc/2020/1219599s98.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Ranger</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/命令行/">
+                                    <span class="chip bg-color">命令行</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">客官能否打赏一杯奶茶？</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '259c386063a0032a770b',
+        clientSecret: '8c7df255d50b18508a40ff970c9cd5f935b30318',
+        repo: 'wiltonicp.github.io',
+        owner: 'wiltonicp',
+        admin: "wiltonicp",
+        id: '2020-12-19T19-09-23',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/libs/valine/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'VObbyNdXUIBNKrFhS6joTWbM-gzGzoHsz',
+        appKey: 'bFnw3OyBioq3wEb1oR3jYcwA',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'wavatar',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '如果你没有GitHub账号，还可以在这里评论啦！'
+    });
+</script>
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2020/122159990.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/medias/featureimages/0.jpg" class="responsive-img" alt="SpringBoot2.3整合Elasticsearch7.x完整版">
+                        
+                        <span class="card-title">SpringBoot2.3整合Elasticsearch7.x完整版</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            本文介绍SpringBoot2.3整合Elasticsearch7.x完整版流程
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-21
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/SpringBoot系列/" class="post-category">
+                                    SpringBoot系列
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/docker/">
+                        <span class="chip bg-color">docker</span>
+                    </a>
+                    
+                    <a href="/tags/Elasticsearch/">
+                        <span class="chip bg-color">Elasticsearch</span>
+                    </a>
+                    
+                    <a href="/tags/SpringBoot/">
+                        <span class="chip bg-color">SpringBoot</span>
+                    </a>
+                    
+                    <a href="/tags/Kibana/">
+                        <span class="chip bg-color">Kibana</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/120159998.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/medias/featureimages/18.jpg" class="responsive-img" alt="Centos7.X安装docker及docker-compose">
+                        
+                        <span class="card-title">Centos7.X安装docker及docker-compose</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            本文整理了docker的安装教程和镜像加速配置等其他配置以及docker的常用命令
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/环境搭建/" class="post-category">
+                                    环境搭建
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/容器/">
+                        <span class="chip bg-color">容器</span>
+                    </a>
+                    
+                    <a href="/tags/docker/">
+                        <span class="chip bg-color">docker</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2023</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">Ranger</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">7.8k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2019";
+                    var startMonth = "12";
+                    var startDate = "1";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+            <span id="icp"><img src="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/medias/icp.png" style="vertical-align: text-bottom;" />
+                <a href="https://blog.vihackerframework.cc" target="_blank">陇ICP备19001629号</a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/wiltonicp" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:wilton.icp@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=809733657" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 809733657" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/libs/materialize/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/libs/aos/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?46e4520e5a028d36d131f0913de6c49d";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/libs/background/ribbon.min.js" async="async"></script>
+    
+
+    
+
+    
+    <script src="https://cdn.jsdelivr.net/gh/wiltonicp/wiltonicp.github.io/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ranger的博客</title>
+  
+  <subtitle>春观夜樱，夏望繁星，秋赏满月，冬会初雪。</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://blog.vihackerframework.cc/"/>
+  <updated>2023-01-29T09:45:11.114Z</updated>
+  <id>https://blog.vihackerframework.cc/</id>
+  
+  <author>
+    <name>Ranger</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基于docker-compse搭建nacos</title>
+    <link href="https://blog.vihackerframework.cc/2023/012959997.html"/>
+    <id>https://blog.vihackerframework.cc/2023/012959997.html</id>
+    <published>2023-01-29T09:10:45.000Z</published>
+    <updated>2023-01-29T09:45:11.114Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;img src=&quot;http://oss.vihacker.top/image/关注我.png&quot; alt=&quot;微信扫码关注&quot; style=&quot;zoom:50%;&quot;&gt;
+
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="环境搭建" scheme="https://blog.vihackerframework.cc/categories/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="docker" scheme="https://blog.vihackerframework.cc/tags/docker/"/>
+    
+      <category term="nacos" scheme="https://blog.vihackerframework.cc/tags/nacos/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot2.3整合Elasticsearch7.x完整版</title>
+    <link href="https://blog.vihackerframework.cc/2020/122159990.html"/>
+    <id>https://blog.vihackerframework.cc/2020/122159990.html</id>
+    <published>2020-12-21T14:11:40.000Z</published>
+    <updated>2023-01-29T09:45:11.121Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;img src=&quot;http://oss.vihacker.top/image/关注我.png&quot; alt=&quot;微信扫码关注&quot; style=&quot;zoom:50%;&quot;&gt;
+
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="SpringBoot系列" scheme="https://blog.vihackerframework.cc/categories/SpringBoot%E7%B3%BB%E5%88%97/"/>
+    
+    
+      <category term="docker" scheme="https://blog.vihackerframework.cc/tags/docker/"/>
+    
+      <category term="Elasticsearch" scheme="https://blog.vihackerframework.cc/tags/Elasticsearch/"/>
+    
+      <category term="SpringBoot" scheme="https://blog.vihackerframework.cc/tags/SpringBoot/"/>
+    
+      <category term="Kibana" scheme="https://blog.vihackerframework.cc/tags/Kibana/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打造 Mac 下高颜值好用的终端环境</title>
+    <link href="https://blog.vihackerframework.cc/2020/1219599s98.html"/>
+    <id>https://blog.vihackerframework.cc/2020/1219599s98.html</id>
+    <published>2020-12-19T11:09:23.000Z</published>
+    <updated>2023-01-29T09:45:11.109Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;img src=&quot;http://oss.vihacker.top/image/关注我.png&quot; alt=&quot;微信扫码关注&quot; style=&quot;zoom:50%;&quot;&gt;
+
+&lt;hr&gt;
+&lt;p&gt;如果你觉得当前的终端操作不符合你的气质，可以看看我今天来介绍的 Mac
+        
+      
+    
+    </summary>
+    
+      <category term="Mac" scheme="https://blog.vihackerframework.cc/categories/Mac/"/>
+    
+    
+      <category term="命令行" scheme="https://blog.vihackerframework.cc/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Centos7.X安装docker及docker-compose</title>
+    <link href="https://blog.vihackerframework.cc/2020/120159998.html"/>
+    <id>https://blog.vihackerframework.cc/2020/120159998.html</id>
+    <published>2020-12-01T11:09:23.000Z</published>
+    <updated>2023-01-29T09:45:11.102Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;img src=&quot;http://oss.vihacker.top/image/关注我.png&quot; alt=&quot;微信扫码关注&quot; style=&quot;zoom:50%;&quot;&gt;
+
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="环境搭建" scheme="https://blog.vihackerframework.cc/categories/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="容器" scheme="https://blog.vihackerframework.cc/tags/%E5%AE%B9%E5%99%A8/"/>
+    
+      <category term="docker" scheme="https://blog.vihackerframework.cc/tags/docker/"/>
+    
+  </entry>
+  
+</feed>
